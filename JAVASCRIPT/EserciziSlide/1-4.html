@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Esercizio 1.4</title>
+</head>
+<body>
+
+  <p id="output"></p>
+
+  <script>
+    let str = '50';
+
+    function isNumeric(value) {
+      return !isNaN(value);
+    }
+
+    let output = "Valore originale: " + str + " (tipo: " + typeof str + ")<br>";
+
+    let isNumericResult = isNumeric(str);
+    output += "La variabile è numerica? " + isNumericResult + "<br>";
+
+    let num = Number(str);
+
+    output += "Valore dopo conversione: " + num + " (tipo: " + typeof num + ")";
+
+    document.getElementById("output").innerHTML = output;
+  </script>
+
+</body>
+</html>
