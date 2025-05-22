@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.3</title>
+</head>
+<body>
+    <div id="time"></div>
+    
+    <script>
+        let secondi = prompt("inserisci i secondi da calcolare: ")
+        let minuti = parseInt(secondi / 60)
+        let ore = parseInt( secondi / 3600)
+
+        document.getElementById("time").innerHTML = ore + " ore " + minuti + " minuti " + secondi + " secondi" 
+
+    </script>
+</body>
+</html>

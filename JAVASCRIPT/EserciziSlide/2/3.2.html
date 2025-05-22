@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.2</title>
+</head>
+<body>
+    <div id="età"></div>
+    <div id="raggiungi"></div>
+
+    <script>
+        let anno_corrente = prompt("Quale anno è corrente: ");
+        let età = prompt("Inserisci il tuo anno di nascita: ");
+
+        document.getElementById("età").innerHTML = "La tua età è: " + (anno_corrente - età)
+        
+        document.getElementById("raggiungi").innerHTML = "Per raggiungere i 100 anni ci vogliono ancora: " + (100 - (anno_corrente - età))
+
+    </script>
+</body>
+</html>
