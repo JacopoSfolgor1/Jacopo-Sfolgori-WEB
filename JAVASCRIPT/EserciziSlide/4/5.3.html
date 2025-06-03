@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>5.3</title>
+</head>
+<body style="text-align: center;">
+  <h2>Gioco: indovina il numero!</h2>
+
+  <input type="number" id="tentativo" placeholder="Indovinami" />
+  <button onclick="controllaTentativo()">Controlla</button>
+
+  <div>
+    <strong>Tentativi: </strong>
+    <input style="text-align: center;background-color: rgb(224, 219, 219);"type="text" id="conteggio" value="0" disabled />
+  </div>
+  <button onclick="nuovoGioco()">Nuovo Gioco</button>
+
+  <p id="messaggio"></p>
+
+  <script>
+    let randomNumber = generaNumero();
+    let tentativi = 0;
+
+    function generaNumero() {
+      return Math.floor(Math.random() * 101);
+    }
+
+    function controllaTentativo() {
+      const input = document.getElementById("tentativo");
+      const messaggio = document.getElementById("messaggio");
+      const conteggio = document.getElementById("conteggio");
+
+      let tentativo = parseInt(input.value);
+
+      if (isNaN(tentativo) || tentativo < 0 || tentativo > 100 || tentativo === "" ) {
+        messaggio.textContent = "Inserisci un numero valido tra 0 e 100";
+        return input.value = "";
+      }
+
+      tentativi++;
+      conteggio.value = tentativi;
+
+      if (tentativo === randomNumber) {
+        messaggio.textContent = "Hai indovinato il numero!";
+      } else if (tentativo < randomNumber) {
+        messaggio.textContent = "Più grande";
+      } else {
+        messaggio.textContent = "Più piccolo";
+      }
+
+      input.value = "";
+    }
+
+    function nuovoGioco() {
+      randomNumber = generaNumero();
+      tentativi = 0;
+      document.getElementById("conteggio").value = 0;
+      document.getElementById("tentativo").value = "";
+      document.getElementById("messaggio").textContent = "";
+    }
+  </script>
+</body>
+</html>

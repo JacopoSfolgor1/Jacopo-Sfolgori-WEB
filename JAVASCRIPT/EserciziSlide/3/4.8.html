@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.8</title>
+</head>
+<body>
+    <h2>Numeri pari e dispari fra 10 numeri </h2>
+    <div id="pari"></div>
+    <div id="dispari"></div>
+    <script>
+        var great = 0;
+        var count = 10;
+        var pari = 0;
+        var dispari = 0;
+
+        for (var i = 0; i < count;) {
+            var input = prompt("Inserisci un numero:");
+            if (input === null || input.trim() === "" || isNaN(parseFloat(input))) {
+                alert("Numero non valido");
+            } else {
+                var numero = parseFloat(input);
+                if (numero % 2 == 0){
+                    pari ++
+                } else{
+                    dispari ++
+                }
+                i++;
+            }
+        }
+
+        document.getElementById("pari").innerHTML = "<h3>Numeri pari: </h3>" + pari;
+        document.getElementById("dispari").innerHTML = "<h3>Numeri dispari: </h3>" + dispari;
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.6</title>
+</head>
+<body>
+    <h2>Media e somma di 5 numeri</h2>
+    <div id="media"></div>
+    <div id="somma"></div>
+    <script>
+        var somma = 0;
+        var count = 5;
+
+        for (var i = 0; i < count;) {
+            var input = prompt("Inserisci un numero:");
+            if (input === null || input.trim() === "" || isNaN(parseFloat(input))) {
+                alert("Numero non valido");
+            } else {
+                var numero = parseFloat(input);
+                somma += numero;
+                i++;
+            }
+        }
+
+        var media = somma / count;
+
+        document.getElementById("media").innerHTML = "<h3>Media: </h3>" + media;
+        document.getElementById("somma").innerHTML = "<h3>Somma: </h3>" + somma;
+    </script>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Numeri da 0 a 20</h2>
+    <div id="for"></div>
+    <div id="while"></div>
+    <script>
+        var outputFor = "<h3>Ciclo For, numeri da 0 a 20: </h3>";
+        for (var i = 0; i <= 20; i+=2){
+            outputFor += i + "<br>";
+        }
+        document.getElementById("for").innerHTML = outputFor;
+
+        var i = 0;
+        var outputWhile = "<h3> Ciclo While, numeri da 0 a 20: </h3>";
+
+        while (i <= 20){
+            outputWhile += i + "<br>";
+            i+=2;
+        }
+        document.getElementById("while").innerHTML = outputWhile;
+    
+    </script>
+</body>
+</html>

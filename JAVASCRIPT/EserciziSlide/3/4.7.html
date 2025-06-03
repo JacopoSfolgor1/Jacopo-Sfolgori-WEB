@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.7</title>
+</head>
+<body>
+    <h2>Numero più grande fra 7 numeri </h2>
+    <div id="greater"></div>
+    <script>
+        var great = 0;
+        var count = 7;
+
+        for (var i = 0; i < count;) {
+            var input = prompt("Inserisci un numero:");
+            if (input === null || input.trim() === "" || isNaN(parseFloat(input))) {
+                alert("Numero non valido");
+            } else {
+                var numero = parseFloat(input);
+                if (numero > great){
+                    great = numero
+                }
+                i++;
+            }
+        }
+
+        document.getElementById("greater").innerHTML = "<h3>Numero più grande: </h3>" + great;
+    </script>
+    
+</body>
+</html>

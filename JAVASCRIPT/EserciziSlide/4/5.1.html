@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.1 </title>
+</head>
+<body>
+    <h2>Controllo se due argomenti sono uguali</h2>
+
+    <input type="text" id="input1" placeholder="1"><br><br>
+    <input type="text" id="input2" placeholder="2"><br><br>
+
+    <button onclick="equal()">Verifica</button>
+
+    <p id="check"></p>
+
+    <script>
+        function equal() {
+            const arg1 = document.getElementById("input1").value;
+            const arg2 = document.getElementById("input2").value;
+
+            if (arg1 === arg2) {
+                document.getElementById("check").innerHTML = "TRUE";
+            } else {
+                document.getElementById("check").innerHTML = "FALSE";
+            }
+        }
+    </script>
+</body>
+</html>

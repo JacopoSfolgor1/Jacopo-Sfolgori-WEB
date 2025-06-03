@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>5.2</title>
+</head>
+<body>
+  <h2>Inserisci un numero da 1 a 7</h2>
+
+  <input type="text" id="numero" placeholder="Numero" />
+
+  <br><br>
+
+  <button onclick="verifica()">Verifica se è tra 1 e 7</button>
+
+  <button onclick="mostraGiorno()">Mostra giorno della settimana</button>
+
+  <p id="output"></p>
+
+  <script>
+    function verifyint(x) {
+      return x >= 1 && x <= 7;
+    }
+
+    function weekday(x) {
+      if (verifyint(x)) {
+        switch (x) {
+          case 1: return "Lunedì";
+          case 2: return "Martedì";
+          case 3: return "Mercoledì";
+          case 4: return "Giovedì";
+          case 5: return "Venerdì";
+          case 6: return "Sabato";
+          case 7: return "Domenica";
+        }
+      } else {
+        return "Peccato, non posso indovinare il giorno.";
+      }
+    }
+
+    function verifica() {
+      const numero = parseInt(document.getElementById("numero").value);
+      const output = document.getElementById("output");
+
+      if (verifyint(numero)) {
+        output.innerHTML = "TRUE";
+      } else {
+        output.innerHTML = "FALSE";
+      }
+    }
+
+    function mostraGiorno() {
+      const numero = parseInt(document.getElementById("numero").value);
+      document.getElementById("output").innerHTML = weekday(numero);
+    }
+  </script>
+</body>
+</html>

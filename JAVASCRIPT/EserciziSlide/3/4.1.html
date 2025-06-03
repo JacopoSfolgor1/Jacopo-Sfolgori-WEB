@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.1</title>
+</head>
+<body>
+  <h2>Tabellina da 1 a 10</h2>
+  <div id="for"></div>
+  <div id="while"></div>
+
+  <script>
+    var numero = parseInt(prompt("Inserisci un numero da 1 a 10:"));
+
+    
+    if (isNaN(numero) || numero < 1 || numero > 10) {
+      document.getElementById("for").innerHTML = "Inserisci un numero tra 1 e 10.";
+    } else {
+      var outputFor = "<h3>Tabellina del " + numero + " (con for):</h3>";
+      
+    
+      for (var i = 1; i <= 10; i++) {
+        outputFor += numero + " x " + i + " = " + (numero * i) + "<br>";
+      }
+      document.getElementById("for").innerHTML = outputFor;
+
+      
+      var i = 1;
+      var outputWhile = "<h3>Tabellina del " + numero + " (con while):</h3>";
+      
+      while (i <= 10) {
+        outputWhile += numero + " x " + i + " = " + (numero * i) + "<br>";
+        i++;
+      }
+      document.getElementById("while").innerHTML = outputWhile;
+    }
+  </script>
+</body>
+</html>
